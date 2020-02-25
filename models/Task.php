@@ -5,7 +5,7 @@ class Task
     public static function getTasksList($count = 3)
     {
         $db = Db::getConnection();
-        $sql = 'SELECT * FROM tasks ORDER BY date ASC LIMIT :count';
+        $sql = 'SELECT * FROM tasks ORDER BY date DESC LIMIT :count';
 
         $result = $db->prepare($sql);
         $result->bindParam(':count', $count, PDO::PARAM_INT);
@@ -52,5 +52,26 @@ class Task
             $result->bindParam(':text', $values['text']);
 
             return $result->execute();
+    }
+
+    public static function editTask($id, $values)
+    {
+        $db = Db::getConnection();
+        $sql = 'UPDATE tasks 
+                    SET  name = :name,
+                         email = :email,
+                         text = :text,
+                         date = :date
+                    WHERE id = :id';
+
+        $currentDate = date('Y-m-d H:i:s');
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->bindParam(':name', $values['name'], PDO::PARAM_STR);
+        $result->bindParam('email', $values['email'], PDO::PARAM_STR);
+        $result->bindParam('text', $values['text'], PDO::PARAM_STR);
+        $result->bindParam('date', $currentDate);
+
+        return $result->execute();
     }
 }

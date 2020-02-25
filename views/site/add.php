@@ -3,6 +3,7 @@
 
 <div class="container-lg add-form">
     <form method="post" action="#" enctype="multipart/form-data">
+        <h1>Добавить задачу</h1>
         <p class="error"><?= $errors[0]; ?></p>
         <div class="row">
             <div class="col">
