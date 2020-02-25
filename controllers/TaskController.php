@@ -2,6 +2,15 @@
 
 class TaskController
 {
+    function actionEdit($taskId)
+    {
+        $taskProperties = Task::getTaskById($taskId);
+
+        require_once(ROOT . '/views/site/edit.php');
+
+        return true;
+    }
+
     function actionAdd()
     {
 

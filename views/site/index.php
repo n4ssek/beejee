@@ -14,27 +14,18 @@
         </tr>
         </thead>
         <tbody>
+        <?php foreach ($tasks as $task): ?>
         <tr>
-            <td>Nikc</td>
-            <td>asdddda@mdo.ru</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ea molestias mollitia natus nobis optio quisquam sapiente tempore tenetur vel!</td>
+            <td><?= $task['name']; ?></td>
+            <td><?= $task['email']; ?></td>
+            <td><?= $task['text']; ?></td>
             <td>
                 <input type="checkbox" class="check-task">
                 <p class="admin-check">Отредактированно администратором</p>
+                <a href="/task/edit/<?= $task['id']; ?>">Редактировать</a>
             </td>
         </tr>
-        <tr>
-            <td>Jacob</td>
-            <td>@fat</td>
-            <td>Thornton</td>
-            <td>x</td>
-        </tr>
-        <tr>
-            <td>Larry</td>
-            <td>@twitter</td>
-            <td>the Bird</td>
-            <td>x</td>
-        </tr>
+        <?php endforeach; ?>
         </tbody>
     </table>
 
