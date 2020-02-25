@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="352ec42f-4f11-4098-851d-4f185c711408" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Db.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/db_params.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/TaskController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Task.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/site/add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../start" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -49,7 +60,7 @@
       <updated>1581770558119</updated>
       <workItem from="1581770559423" duration="5188000" />
       <workItem from="1581797013233" duration="640000" />
-      <workItem from="1582617838988" duration="7276000" />
+      <workItem from="1582617838988" duration="16938000" />
     </task>
     <servers />
   </component>
@@ -61,10 +72,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="748" y="330" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582617978236" />
-    <state x="792" y="290" key="FileChooserDialogImpl" timestamp="1581797049732">
+    <state x="792" y="290" key="FileChooserDialogImpl" timestamp="1582626198520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="792" y="290" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1581797049732" />
+    <state x="792" y="290" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582626198520" />
     <state x="804" y="397" key="NewPhpClassDialog" timestamp="1581772193149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -16,3 +16,16 @@ th.text-cell {
 th.status-cell {
     width: 150px;
 }
+
+body > div.container-lg.add-form form{
+    display: flex;
+    flex-direction: column;
+}
+.btn.btn-primary.form-btn {
+    align-self: flex-end;
+}
+@media (min-width: 550px){
+    body > div.container-lg.add-form {
+        width: 500px;
+    }
+}

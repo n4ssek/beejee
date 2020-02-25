@@ -14,7 +14,7 @@
 <div class="container-xl header">
     <div class="header-left">
         <a href="/" class="btn btn-outline-primary">Задачник</a>
-        <a href="/add" class="btn btn-primary">Добавить</a>
+        <a href="/task/add" class="btn btn-primary">Добавить</a>
     </div>
 
     <div class="header-right">
