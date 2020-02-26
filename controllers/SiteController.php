@@ -15,5 +15,37 @@ class SiteController
         return true;
     }
 
+    function actionLogin()
+    {
+        $errors = false;
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        if (isset($_POST['submit'])) {
+            if (empty($username) || empty($password)) {
+                $errors[] = 'Заполните все поля';
+            }
+
+            $admin = Admin::checkAdmin($username, $password);
+            if ($admin == false) {
+                $errors[] = 'Введены неверные данные';
+            } else {
+                Admin::auth();
+
+                header("Location: /");
+            }
+        }
+
+        require_once(ROOT. '/views/site/login.php');
+
+        return true;
+    }
+
+    function actionLogout()
+    {
+        unset($_SESSION['admin']);
+
+        header("Location: /");
+    }
 
 }

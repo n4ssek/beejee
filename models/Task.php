@@ -67,6 +67,7 @@ class Task
                     SET  name = :name,
                          email = :email,
                          text = :text,
+                         status = :status,
                          date = :date
                     WHERE id = :id';
 
@@ -74,8 +75,9 @@ class Task
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->bindParam(':name', $values['name'], PDO::PARAM_STR);
-        $result->bindParam('email', $values['email'], PDO::PARAM_STR);
-        $result->bindParam('text', $values['text'], PDO::PARAM_STR);
+        $result->bindParam(':email', $values['email'], PDO::PARAM_STR);
+        $result->bindParam(':text', $values['text'], PDO::PARAM_STR);
+        $result->bindParam(':status', $values['status']);
         $result->bindParam('date', $currentDate);
 
         return $result->execute();

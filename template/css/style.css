@@ -16,7 +16,9 @@ th.text-cell {
 th.status-cell {
     width: 150px;
 }
-
+td.text-cell {
+    word-break: break-all;
+}
 body > div.container-lg.add-form form{
     display: flex;
     flex-direction: column;

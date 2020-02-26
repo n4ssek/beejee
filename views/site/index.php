@@ -18,11 +18,15 @@
         <tr>
             <td><?= $task['name']; ?></td>
             <td><?= $task['email']; ?></td>
-            <td><?= $task['text']; ?></td>
+            <td class="text-cell"><?= $task['text']; ?></td>
             <td>
-                <input type="checkbox" class="check-task">
+                <?php if ($task['status'] == true): ?>
+                <img src="/template/images/check.jpg" alt="" width="50px" height="50px">
+                <?php endif; ?>
                 <p class="admin-check">Отредактированно администратором</p>
+                <?php if(Admin::checkLogged()): ?>
                 <a href="/task/edit/<?= $task['id']; ?>">Редактировать</a>
+                <?php endif; ?>
             </td>
         </tr>
         <?php endforeach; ?>

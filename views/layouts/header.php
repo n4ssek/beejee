@@ -18,8 +18,11 @@
     </div>
 
     <div class="header-right">
+        <?php if (!Admin::checkLogged()): ?>
         <a href="/login" class="btn btn-primary">Вход</a>
+        <?php else: ?>
         <a href="/logout" class="btn btn-primary">Выход</a>
+        <?php endif; ?>
     </div>
 </div>
 

@@ -4,26 +4,33 @@ class TaskController
 {
     function actionEdit($taskId)
     {
-        $taskProperties = Task::getTaskById($taskId);
+        if (Admin::checkLogged()) {
+            $taskProperties = Task::getTaskById($taskId);
 
-        $task = Task::editTask($taskId, $values);
+//            $task = Task::editTask($taskId, $values);
 
-        if (isset($_POST['submit'])) {
-            $values['name'] = $_POST['name'];
-            $values['email'] = $_POST['email'];
-            $values['text'] = $_POST['text'];
+            if (isset($_POST['submit'])) {
+                $values['name'] = $_POST['name'];
+                $values['email'] = $_POST['email'];
+                $values['text'] = $_POST['text'];
+                $values['status'] = $_POST['status'];
 
-            $errors = false;
-            if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['text'])) {
-                $errors[] = 'Заполните все поля';
+                $errors = false;
+                if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['text'])) {
+                    $errors[] = 'Заполните все поля';
+                }
+                if ($errors == false) {
+                    Task::editTask($taskId, $values);
+                    header("Location: /");
+                }
             }
-            if ($errors == false) {
-                Task::editTask($taskId, $values);
-                header("Location: /");
-            }
+
+            require_once(ROOT . '/views/site/edit.php');
+
+            return true;
         }
 
-        require_once(ROOT . '/views/site/edit.php');
+        echo 'Доступ к редактированию запрещен';
 
         return true;
     }
