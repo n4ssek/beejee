@@ -7,17 +7,19 @@ class TaskController
         if (Admin::checkLogged()) {
             $taskProperties = Task::getTaskById($taskId);
 
-//            $task = Task::editTask($taskId, $values);
-
             if (isset($_POST['submit'])) {
                 $values['name'] = $_POST['name'];
                 $values['email'] = $_POST['email'];
                 $values['text'] = $_POST['text'];
                 $values['status'] = $_POST['status'];
 
+//                var_dump($values['text']);
                 $errors = false;
                 if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['text'])) {
                     $errors[] = 'Заполните все поля';
+                }
+                if ($taskProperties['text'] != $values['text']) {
+                    Task::editAdminTask($taskId);
                 }
                 if ($errors == false) {
                     Task::editTask($taskId, $values);

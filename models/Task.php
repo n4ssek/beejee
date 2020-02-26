@@ -26,6 +26,7 @@ class Task
             $tasksList[$i]['email'] = $row['email'];
             $tasksList[$i]['text'] = $row['text'];
             $tasksList[$i]['status'] = $row['status'];
+            $tasksList[$i]['edited_by_admin'] = $row['edited_by_admin'];
             $tasksList[$i]['date'] = $row['date'];
             $i++;
         }
@@ -78,7 +79,18 @@ class Task
         $result->bindParam(':email', $values['email'], PDO::PARAM_STR);
         $result->bindParam(':text', $values['text'], PDO::PARAM_STR);
         $result->bindParam(':status', $values['status']);
-        $result->bindParam('date', $currentDate);
+        $result->bindParam(':date', $currentDate);
+
+        return $result->execute();
+    }
+
+    public static function editAdminTask($id)
+    {
+        $db = Db::getConnection();
+        $sql = 'UPDATE tasks SET edited_by_admin = 1 WHERE id = :id';
+
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
 
         return $result->execute();
     }
@@ -94,5 +106,12 @@ class Task
         $row = $result->fetch();
 
         return $row['count'];
+    }
+
+    public static function sortByName()
+    {
+        $db = Db::getConnection();
+
+
     }
 }
