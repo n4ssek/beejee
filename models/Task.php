@@ -2,13 +2,19 @@
 
 class Task
 {
-    public static function getTasksList($count = 3)
+    const TASKS_PER_PAGE = 3;
+
+    public static function getTasksList($page, $count = self::TASKS_PER_PAGE)
     {
+
+        $offset = ($page - 1) * self::TASKS_PER_PAGE;
+
         $db = Db::getConnection();
-        $sql = 'SELECT * FROM tasks ORDER BY date DESC LIMIT :count';
+        $sql = 'SELECT * FROM tasks ORDER BY date DESC LIMIT :count OFFSET :offset';
 
         $result = $db->prepare($sql);
         $result->bindParam(':count', $count, PDO::PARAM_INT);
+        $result->bindParam(':offset', $offset, PDO::PARAM_INT);
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $result->execute();
 
@@ -73,5 +79,18 @@ class Task
         $result->bindParam('date', $currentDate);
 
         return $result->execute();
+    }
+
+    public static function getTotalTasks()
+    {
+        $db = Db::getConnection();
+
+        $sql = 'SELECT count(id) AS count FROM tasks';
+
+        $result = $db->prepare($sql);
+        $result->execute();
+        $row = $result->fetch();
+
+        return $row['count'];
     }
 }
