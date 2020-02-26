@@ -4,9 +4,9 @@ class Task
 {
     const TASKS_PER_PAGE = 3;
 
-    public static function getTasksList($page, $count = self::TASKS_PER_PAGE)
+    public static function getTasksList($page = 1)
     {
-
+        $count = self::TASKS_PER_PAGE;
         $offset = ($page - 1) * self::TASKS_PER_PAGE;
 
         $db = Db::getConnection();

@@ -4,7 +4,6 @@ class SiteController
 {
     function actionIndex($page = 1)
     {
-        $page = intval($page);
         $tasks = Task::getTasksList($page);
         $total = Task::getTotalTasks();
 
