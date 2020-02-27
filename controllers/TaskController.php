@@ -13,16 +13,17 @@ class TaskController
                 $values['text'] = $_POST['text'];
                 $values['status'] = $_POST['status'];
 
-//                var_dump($values['text']);
                 $errors = false;
                 if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['text'])) {
                     $errors[] = 'Заполните все поля';
                 }
                 if ($taskProperties['text'] != $values['text']) {
-                    Task::editAdminTask($taskId);
+                    Task::editedByAdminTask($taskId);
                 }
                 if ($errors == false) {
                     Task::editTask($taskId, $values);
+                    Flash::setEditSuccessMessage();
+
                     header("Location: /");
                 }
             }
@@ -52,6 +53,9 @@ class TaskController
 
             if ($errors == false) {
                 Task::addTask($values);
+                Task::setDateOrder();
+                Flash::setAddSuccessMessage();
+
                 header("Location: /");
             }
         }

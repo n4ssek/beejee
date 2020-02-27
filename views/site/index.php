@@ -3,15 +3,15 @@
 
 
 <div class="container-xl">
-
-    <table class="table" id="tasks-table">
+    <?php Flash::getSuccessMessage(); ?>
+    <table class="table">
         <thead class="thead-dark">
-        <tr>
-            <th scope="col"><a href="#" class="column-sort" id="name" data-order="desc">Имя</a></th>
-            <th scope="col"><a href="#" class="column-sort" id="email" data-order="desc">Email</a></th>
-            <th scope="col" class="text-cell"><a href="#" class="column-sort" id="text" data-order="desc">Текст</a></th>
-            <th scope="col" class="status-cell"><a href="#" class="column-sort" id="status" data-order="desc">Статус</a></th>
-        </tr>
+            <tr>
+                <th scope="col"><a href="#" class="column-sort" id="name" data-order="desc">Имя</a></th>
+                <th scope="col"><a href="#" class="column-sort" id="email" data-order="desc">Email</a></th>
+                <th scope="col" class="text-cell"><a href="#" class="column-sort" id="text" data-order="desc">Текст</a></th>
+                <th scope="col" class="status-cell"><a href="#" class="column-sort" id="status" data-order="desc">Статус</a></th>
+            </tr>
         </thead>
         <tbody>
         <?php foreach ($tasks as $task): ?>
@@ -35,7 +35,7 @@
         </tbody>
     </table>
 
-    <?= $pagination->get(); ?>
+<!--    --><?//= $pagination->get(); ?>
 </div>
 
 

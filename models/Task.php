@@ -2,19 +2,15 @@
 
 class Task
 {
+
     const TASKS_PER_PAGE = 3;
 
     public static function getTasksList($page = 1)
     {
-        $count = self::TASKS_PER_PAGE;
-        $offset = ($page - 1) * self::TASKS_PER_PAGE;
-
         $db = Db::getConnection();
-        $sql = 'SELECT * FROM tasks ORDER BY date DESC LIMIT :count OFFSET :offset';
+        $sql = 'SELECT * FROM tasks ORDER BY date DESC';
 
         $result = $db->prepare($sql);
-        $result->bindParam(':count', $count, PDO::PARAM_INT);
-        $result->bindParam(':offset', $offset, PDO::PARAM_INT);
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $result->execute();
 
@@ -54,9 +50,9 @@ class Task
                      VALUES (:name, :email, :text)';
 
             $result = $db->prepare($sql);
-            $result->bindParam(':name', $values['name']);
-            $result->bindParam(':email', $values['email']);
-            $result->bindParam(':text', $values['text']);
+            $result->bindParam(':name', htmlspecialchars($values['name']));
+            $result->bindParam(':email', htmlspecialchars($values['email']));
+            $result->bindParam(':text', htmlspecialchars($values['text']));
 
             return $result->execute();
     }
@@ -84,7 +80,7 @@ class Task
         return $result->execute();
     }
 
-    public static function editAdminTask($id)
+    public static function editedByAdminTask($id)
     {
         $db = Db::getConnection();
         $sql = 'UPDATE tasks SET edited_by_admin = 1 WHERE id = :id';
@@ -108,10 +104,13 @@ class Task
         return $row['count'];
     }
 
-    public static function sortByName()
+    public static function setDateOrder()
     {
         $db = Db::getConnection();
+        $sql = 'SELECT * FROM tasks ORDER BY date DESC';
 
-
+        $result = $db->prepare($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        return $result->execute();
     }
 }

@@ -7,8 +7,15 @@
     <meta name="author" content="">
     <title>Beejee</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="/template/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
 </head><!--/head-->
 
 
@@ -17,7 +24,8 @@
         <a href="/" class="btn btn-outline-primary">Задачник</a>
         <a href="/task/add" class="btn btn-primary">Добавить</a>
     </div>
-
+    <div class="git_link"><a href="https://github.com/n4ssek/beejee" class="btn btn-secondary" target="_blank"><img
+                src="/template/images/github_icon2w.png" alt="" width="25px" height="25px"> github</a></div>
     <div class="header-right">
         <?php if (!Admin::checkLogged()): ?>
         <a href="/login" class="btn btn-primary">Вход</a>

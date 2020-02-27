@@ -7,7 +7,6 @@ class SiteController
         $tasks = Task::getTasksList($page);
         $total = Task::getTotalTasks();
 
-
         $pagination = new Pagination($total, $page, Task::TASKS_PER_PAGE, 'page-');
 
         require_once(ROOT . '/views/site/index.php');

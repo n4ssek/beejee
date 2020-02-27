@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="352ec42f-4f11-4098-851d-4f185c711408" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/template/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Flash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SiteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TaskController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layouts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/index.php" afterDir="false" />
@@ -39,6 +43,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ospanel\domains\zadachnik\views\layouts" />
+      <recent name="D:\ospanel\domains\zadachnik\template\js" />
       <recent name="D:\ospanel\domains\start-nulled\template" />
     </key>
   </component>
@@ -55,7 +61,8 @@
       <workItem from="1581770559423" duration="5188000" />
       <workItem from="1581797013233" duration="640000" />
       <workItem from="1582617838988" duration="33295000" />
-      <workItem from="1582699675823" duration="25817000" />
+      <workItem from="1582699675823" duration="26440000" />
+      <workItem from="1582789622943" duration="17513000" />
     </task>
     <servers />
   </component>
@@ -67,26 +74,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="748" y="330" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582723441641" />
-    <state x="792" y="290" key="FileChooserDialogImpl" timestamp="1582700181415">
+    <state x="792" y="290" key="FileChooserDialogImpl" timestamp="1582799470187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="792" y="290" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582700181415" />
+    <state x="792" y="290" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582799470187" />
     <state x="804" y="397" key="NewPhpClassDialog" timestamp="1581772193149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="804" y="397" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1581772193149" />
-    <state x="853" y="506" key="NewPhpFileDialog" timestamp="1581773576085">
+    <state x="853" y="506" key="NewPhpFileDialog" timestamp="1582814996991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="853" y="506" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1581773576085" />
+    <state x="853" y="506" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582814996991" />
     <state x="231" y="149" key="SettingsEditor" timestamp="1582704943499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="231" y="149" key="SettingsEditor/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582704943499" />
-    <state x="742" y="353" key="com.intellij.ide.util.TipDialog" timestamp="1582699714359">
+    <state x="742" y="353" key="com.intellij.ide.util.TipDialog" timestamp="1582789807462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="742" y="353" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582699714359" />
+    <state x="742" y="353" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582789807462" />
     <state x="392" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1582643521992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
