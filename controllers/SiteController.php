@@ -30,7 +30,7 @@ class SiteController
                 $errors[] = 'Введены неверные данные';
             } else {
                 Admin::auth();
-
+                Flash::setLoginSuccessMessage();
                 header("Location: /");
             }
         }
