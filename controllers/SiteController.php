@@ -2,12 +2,10 @@
 
 class SiteController
 {
-    function actionIndex($page = 1)
+    function actionIndex()
     {
-        $tasks = Task::getTasksList($page);
-        $total = Task::getTotalTasks();
-
-        $pagination = new Pagination($total, $page, Task::TASKS_PER_PAGE, 'page-');
+        //Передаем массив с заданиями из бд во вью
+        $tasks = Task::getTasksList();
 
         require_once(ROOT . '/views/site/index.php');
 
@@ -16,19 +14,24 @@ class SiteController
 
     function actionLogin()
     {
+
         $errors = false;
         $username = $_POST['username'];
         $password = $_POST['password'];
 
+
         if (isset($_POST['submit'])) {
+            //Если поля пустые выводится сообщение об ошибке
             if (empty($username) || empty($password)) {
                 $errors[] = 'Заполните все поля';
             }
 
             $admin = Admin::checkAdmin($username, $password);
+            //Если введены неверные данные выводится сообщение об ошибке
             if ($admin == false) {
                 $errors[] = 'Введены неверные данные';
             } else {
+                //Авторизация и перенаправление на главную страницу
                 Admin::auth();
                 Flash::setLoginSuccessMessage();
                 header("Location: /");

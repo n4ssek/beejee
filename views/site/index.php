@@ -35,7 +35,6 @@
         </tbody>
     </table>
 
-<!--    --><?//= $pagination->get(); ?>
 </div>
 
 
