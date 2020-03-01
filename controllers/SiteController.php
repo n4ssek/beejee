@@ -15,7 +15,6 @@ class SiteController
     function actionLogin()
     {
 
-        $errors = false;
         $username = $_POST['username'];
         $password = $_POST['password'];
 
@@ -23,13 +22,13 @@ class SiteController
         if (isset($_POST['submit'])) {
             //Если поля пустые выводится сообщение об ошибке
             if (empty($username) || empty($password)) {
-                $errors[] = 'Заполните все поля';
+                Flash::setBlankFieldsFailureMessage();
             }
 
             $admin = Admin::checkAdmin($username, $password);
             //Если введены неверные данные выводится сообщение об ошибке
             if ($admin == false) {
-                $errors[] = 'Введены неверные данные';
+                Flash::setWrongDataFailureMessage();
             } else {
                 //Авторизация и перенаправление на главную страницу
                 Admin::auth();

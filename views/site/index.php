@@ -3,7 +3,7 @@
 
 
 <div class="container-xl">
-    <?php Flash::getSuccessMessage(); ?>
+    <?php Flash::getFlashMessage(); ?>
     <table class="table">
         <thead class="thead-dark">
             <tr>

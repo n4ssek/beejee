@@ -17,7 +17,17 @@ class Flash
         return $_SESSION['message'] = "<div class=\"alert alert-success\">Вы вошли как администратор</div>";
     }
 
-    public static function getSuccessMessage()
+    public static function setBlankFieldsFailureMessage()
+    {
+        return $_SESSION['message'] = "<div class=\"alert alert-danger\">Заполните все поля</div>";
+    }
+
+    public static function setWrongDataFailureMessage()
+    {
+        return $_SESSION['message'] = "<div class=\"alert alert-danger\">Введены неверные данные</div>";
+    }
+
+    public static function getFlashMessage()
     {
         if (isset($_SESSION['message'])) {
             echo $_SESSION['message'];
