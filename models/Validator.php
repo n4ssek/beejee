@@ -8,7 +8,7 @@ class Validator
      */
     public static function clean($value)
     {
-        return stripcslashes(trim($value));
+        return stripslashes(trim($value));
     }
 
     public static function validate($value)
