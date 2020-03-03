@@ -10,10 +10,10 @@ class TaskController
             $taskProperties = Task::getTaskById($taskId);
 
             if (isset($_POST['submit'])) {
-                $values['name'] = $_POST['name'];
-                $values['email'] = $_POST['email'];
-                $values['text'] = $_POST['text'];
-                $values['status'] = $_POST['status'];
+                $values['name'] = Validator::clean($_POST['name']);
+                $values['email'] = Validator::clean($_POST['email']);
+                $values['text'] = Validator::clean($_POST['text']);
+                $values['status'] = intval(Validator::clean($_POST['status']));
 
 
 
@@ -48,9 +48,9 @@ class TaskController
     {
 
         if (isset($_POST['submit'])) {
-            $values['name'] = $_POST['name'];
-            $values['email'] = $_POST['email'];
-            $values['text'] = $_POST['text'];
+            $values['name'] = Validator::clean($_POST['name']);
+            $values['email'] = Validator::clean($_POST['email']);
+            $values['text'] = Validator::clean($_POST['text']);
 
             if (empty($values['name']) || empty($values['email']) || empty($values['text'])) {
                 //Если поля не заполнены выводим сообщение об ошибке

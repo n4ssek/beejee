@@ -15,8 +15,8 @@ class SiteController
     function actionLogin()
     {
 
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = Validator::clean($_POST['username']);
+        $password = Validator::clean($_POST['password']);
 
 
         if (isset($_POST['submit'])) {
