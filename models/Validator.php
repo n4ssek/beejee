@@ -11,10 +11,19 @@ class Validator
         return stripslashes(trim($value));
     }
 
-    public static function validate($value)
+    /**
+     * @param $values
+     * @return bool
+     */
+    public static function isValid($values)
     {
-        return preg_match("/[a-zA-Z0-9 ]+/", $value);
+        return strlen($values['name']) < 15 || strlen($values['email'] < 25) || strlen($values['text'] < 80);
     }
+
+    /**
+     * @param $arr
+     * @return bool
+     */
     public static function isEmpty($arr)
     {
         return in_array(null, $arr);
@@ -23,8 +32,8 @@ class Validator
      * @param $email
      * @return bool
      */
-    public static function validateEmail($email)
+    public static function validEmail($email)
     {
-        return filter_var($email, FILTER_VALIDATE_EMAIL) ?  true : false;
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
 }
