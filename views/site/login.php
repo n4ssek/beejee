@@ -2,8 +2,8 @@
 
     <div class="container-lg add-form">
         <form method="post" action="#" enctype="multipart/form-data">
-            <?= Flash::getFlashMessage(); ?>
             <h1>Вход в админ панель</h1>
+            <?= $errors[0]; ?>
             <div class="form-group">
                 <label for="exampleInputEmail1">Имя пользователя</label>
                 <input type="username" class="form-control"  name="username">

@@ -3,7 +3,7 @@
 
 
 <div class="container-xl">
-    <?php Flash::getFlashMessage(); ?>
+    <?php Flash::getSuccessMessage(); ?>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -35,6 +35,7 @@
         </tbody>
     </table>
 
+<!--    --><?//= $pagination->get(); ?>
 </div>
 
 

@@ -3,8 +3,8 @@
 
 <div class="container-lg add-form">
     <form method="post" action="#" enctype="multipart/form-data">
-        <?= Flash::getFlashMessage(); ?>
         <h1>Добавить задачу</h1>
+        <?= $errors[0]; ?>
         <div class="row">
             <div class="col">
                 <input type="text" class="form-control" placeholder="Имя" name="name">

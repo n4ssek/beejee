@@ -4,8 +4,8 @@ class SiteController
 {
     function actionIndex()
     {
-        //Передаем массив с заданиями из бд во вью
         $tasks = Task::getTasksList();
+
 
         require_once(ROOT . '/views/site/index.php');
 
@@ -14,23 +14,19 @@ class SiteController
 
     function actionLogin()
     {
-
-        $username = Validator::clean($_POST['username']);
-        $password = Validator::clean($_POST['password']);
-
+        $errors = false;
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
         if (isset($_POST['submit'])) {
-            //Если поля пустые выводится сообщение об ошибке
             if (empty($username) || empty($password)) {
-                Flash::setBlankFieldsFailureMessage();
+                $errors[] = Flash::setBlankFieldsFailureMessage();
             }
 
             $admin = Admin::checkAdmin($username, $password);
-            //Если введены неверные данные выводится сообщение об ошибке
             if ($admin == false) {
-                Flash::setWrongDataFailureMessage();
-            } else {
-                //Авторизация и перенаправление на главную страницу
+                $errors[] = Flash::setWrongDataFailureMessage();
+            } elseif ($errors == false) {
                 Admin::auth();
                 Flash::setLoginSuccessMessage();
                 header("Location: /");

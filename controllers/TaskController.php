@@ -4,34 +4,27 @@ class TaskController
 {
     function actionEdit($taskId)
     {
-        //Редактирование доступно только администратору- проверяем залогинен ли администратор
         if (Admin::checkLogged()) {
-            //Данные для вывода сообщения о том что задача отредактирована администратором
             $taskProperties = Task::getTaskById($taskId);
 
             if (isset($_POST['submit'])) {
                 $values['name'] = Validator::clean($_POST['name']);
                 $values['email'] = Validator::clean($_POST['email']);
                 $values['text'] = Validator::clean($_POST['text']);
-                $values['status'] = intval(Validator::clean($_POST['status']));
+                $values['status'] = Validator::clean($_POST['status']);
 
-
-
-                if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['text'])) {
-                    //Сообщение об ошибке если поля пустые
-                    Flash::setBlankFieldsFailureMessage();
+                $errors = false;
+                if (Validator::isEmpty($values)) {
+                    $errors[] = Flash::setBlankFieldsFailureMessage();
                 }
                 if ($taskProperties['text'] != $values['text']) {
                     Task::editedByAdminTask($taskId);
+                } elseif ($errors == false) {
+                    Task::editTask($taskId, $values);
+                    Flash::setEditSuccessMessage();
+
+                    header("Location: /");
                 }
-
-                //Редактирование задачи, установка сортировки по дате и перенаправление на главную
-                Task::editTask($taskId, $values);
-                Task::setDateOrder();
-                Flash::setEditSuccessMessage();
-
-                header("Location: /");
-
             }
 
             require_once(ROOT . '/views/site/edit.php');
@@ -52,18 +45,18 @@ class TaskController
             $values['email'] = Validator::clean($_POST['email']);
             $values['text'] = Validator::clean($_POST['text']);
 
-            if (empty($values['name']) || empty($values['email']) || empty($values['text'])) {
-                //Если поля не заполнены выводим сообщение об ошибке
-                Flash::setBlankFieldsFailureMessage();
+            $errors = false;
+            if (Validator::isEmpty($values)) {
+                $errors[] = Flash::setBlankFieldsFailureMessage();
             }
 
-            //Добавление задачи, установка сортировки по дате и перенаправление на главную
-            Task::addTask($values);
-            Task::setDateOrder();
-            Flash::setAddSuccessMessage();
+            if ($errors == false) {
+                Task::addTask($values);
+                Task::setDateOrder();
+                Flash::setAddSuccessMessage();
 
-            header("Location: /");
-
+                header("Location: /");
+            }
         }
 
 

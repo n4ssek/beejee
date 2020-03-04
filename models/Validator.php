@@ -15,6 +15,10 @@ class Validator
     {
         return preg_match("/[a-zA-Z0-9 ]+/", $value);
     }
+    public static function isEmpty($arr)
+    {
+        return in_array(null, $arr);
+    }
     /**
      * @param $email
      * @return bool

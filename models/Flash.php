@@ -19,15 +19,15 @@ class Flash
 
     public static function setBlankFieldsFailureMessage()
     {
-        return $_SESSION['message'] = "<div class=\"alert alert-danger\">Заполните все поля</div>";
+        return "<div class=\"alert alert-danger\">Заполните все поля</div>";
     }
 
     public static function setWrongDataFailureMessage()
     {
-        return $_SESSION['message'] = "<div class=\"alert alert-danger\">Введены неверные данные</div>";
+        return "<div class=\"alert alert-danger\">Введены неверные данные</div>";
     }
 
-    public static function getFlashMessage()
+    public static function getSuccessMessage()
     {
         if (isset($_SESSION['message'])) {
             echo $_SESSION['message'];

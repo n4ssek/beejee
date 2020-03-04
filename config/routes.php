@@ -7,6 +7,7 @@ return [
     //Логин
     'login' => 'site/login',
     'logout' => 'site/logout',
-
+    //Пагинация
+    'page-([0-9]+)' => 'site/index/$1',
     '' => 'site/index'
 ];

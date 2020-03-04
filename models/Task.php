@@ -2,10 +2,10 @@
 
 class Task
 {
-    /**
-     * @return array
-     */
-    public static function getTasksList()
+
+    const TASKS_PER_PAGE = 3;
+
+    public static function getTasksList($page = 1)
     {
         $db = Db::getConnection();
         $sql = 'SELECT * FROM tasks ORDER BY date DESC';
@@ -30,10 +30,6 @@ class Task
         return $tasksList;
     }
 
-    /**
-     * @param int $id
-     * @return mixed
-     */
     public static function getTaskById($id)
     {
         $db = Db::getConnection();
@@ -47,10 +43,6 @@ class Task
         return $result->fetch();
     }
 
-    /**
-     * @param array $values
-     * @return bool
-     */
     public static function addTask($values)
     {
             $db = Db::getConnection();
@@ -65,11 +57,6 @@ class Task
             return $result->execute();
     }
 
-    /**
-     * @param int $id
-     * @param array $values
-     * @return bool
-     */
     public static function editTask($id, $values)
     {
         $db = Db::getConnection();
@@ -93,10 +80,6 @@ class Task
         return $result->execute();
     }
 
-    /**
-     * @param int $id
-     * @return bool
-     */
     public static function editedByAdminTask($id)
     {
         $db = Db::getConnection();
@@ -108,9 +91,6 @@ class Task
         return $result->execute();
     }
 
-    /**
-     * @return bool
-     */
     public static function setDateOrder()
     {
         $db = Db::getConnection();

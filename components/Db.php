@@ -4,7 +4,6 @@ class Db
 {
     public static function getConnection()
     {
-        //Путь к конфигурации базы данных
         $paramsPath = ROOT . '/config/db_params.php';
         $params = include($paramsPath);
 

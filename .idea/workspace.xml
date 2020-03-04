@@ -2,8 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="352ec42f-4f11-4098-851d-4f185c711408" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/start-nulled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/start-nulled.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db_params.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/db_params.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Flash.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Flash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Task.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Validator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../start" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
   </component>
   <component name="RecentsManager">
@@ -53,12 +78,8 @@
       <workItem from="1581797013233" duration="640000" />
       <workItem from="1582617838988" duration="33295000" />
       <workItem from="1582699675823" duration="26440000" />
-      <workItem from="1582789622943" duration="19944000" />
-      <workItem from="1582834716258" duration="72000" />
-      <workItem from="1582902076326" duration="1571000" />
-      <workItem from="1583089566655" duration="1948000" />
-      <workItem from="1583139182935" duration="1954000" />
-      <workItem from="1583238706996" duration="8118000" />
+      <workItem from="1582789622943" duration="17720000" />
+      <workItem from="1583316662903" duration="2007000" />
     </task>
     <servers />
   </component>
@@ -66,18 +87,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="633" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583262652401">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="633" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1583262652401" />
     <state x="748" y="330" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582723441641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="748" y="330" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582723441641" />
-    <state x="792" y="290" key="FileChooserDialogImpl" timestamp="1583260299848">
+    <state x="792" y="290" key="FileChooserDialogImpl" timestamp="1582799470187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="792" y="290" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1583260299848" />
+    <state x="792" y="290" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582799470187" />
     <state x="804" y="397" key="NewPhpClassDialog" timestamp="1581772193149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -90,13 +107,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="231" y="149" key="SettingsEditor/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582704943499" />
-    <state x="742" y="353" key="com.intellij.ide.util.TipDialog" timestamp="1583238841578">
+    <state x="742" y="353" key="com.intellij.ide.util.TipDialog" timestamp="1582789807462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="742" y="353" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1583238841578" />
-    <state x="392" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1582902744557">
+    <state x="742" y="353" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582789807462" />
+    <state x="392" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1582643521992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="392" y="329" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582902744557" />
+    <state x="392" y="329" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.900@0.0.1920.1040" timestamp="1582643521992" />
   </component>
 </project>
