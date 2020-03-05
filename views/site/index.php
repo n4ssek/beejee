@@ -34,8 +34,6 @@
         <?php endforeach; ?>
         </tbody>
     </table>
-
-<!--    --><?//= $pagination->get(); ?>
 </div>
 
 
